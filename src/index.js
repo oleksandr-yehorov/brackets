@@ -9,6 +9,7 @@ module.exports = function check(str, bracketsConfig) {
             if (arr[i] === bracketsConfig[j][0] && arr[i + 1] === bracketsConfig[j][1]) {
               arr.splice(i, 2); 
               let newStr = arr.join('');
+              return check(newStr, bracketsConfig);
             }
         }
     }
