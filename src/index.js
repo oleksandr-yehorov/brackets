@@ -11,6 +11,12 @@ module.exports = function check(str, bracketsConfig) {
             }
         }
     }
+    
+    if (arr.length == 0) {
+      return true
+     }
+      else {
+    return false
+    };
 
-    return (arr.length == 0) ? true : false;
 }
