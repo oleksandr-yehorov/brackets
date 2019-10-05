@@ -7,9 +7,9 @@ module.exports = function check(str, bracketsConfig) {
     for (let i = 0; i < arr.length; i++) {
         for (let j = 0; j < bracketsConfig.length; j++) {
             if (arr[i] === bracketsConfig[j][0] && arr[i + 1] === bracketsConfig[j][1]) {
-              arr.splice(i, 2); 
-              let newStr = arr.join('');
-              return check(newStr, bracketsConfig);
+              arr.splice(i, 2); // delete 2 brackets : opened and closed
+              let newStr = arr.join(''); // make new string 
+              return check(newStr, bracketsConfig); // recursion function
             }
         }
     }
