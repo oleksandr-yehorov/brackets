@@ -2,7 +2,8 @@ module.exports = function check(str, bracketsConfig) {
   // your solution
 
   console.log(str);
-  
+  if (str.length % 2 === 1) return false;
+
   var k=0;
   var i=0;
 
