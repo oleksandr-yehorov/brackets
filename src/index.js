@@ -1,25 +1,16 @@
 module.exports = function check(str, bracketsConfig) {
   // your solution
 
-  console.log(str);
-  if (str.length % 2 === 1) return false;
+ const arr = str.split('');  
+ if (arr.length % 2 !== 0) return false;
 
-  var k=0;
-  var i=0;
-
-  for (i=0; i<str.length; i++) {
-    if (str[i]==bracketsConfig[0,0]) {
-      k++;
-    } else if (str[i+1]==bracketsConfig[0,1]) {
-      k--;
+    for (let i = 0; i < arr.length; i++) {
+        for (let j = 0; j < bracketsConfig.length; j++) {
+            if (arr[i] === bracketsConfig[j][0] && arr[i + 1] === bracketsConfig[j][1]) {
+                
+            }
+        }
     }
-    i=i+2;
-  };
 
-  console.log('k=' + k);
-  var result;
-  if (k == 0) { result=true}
-  else if (k!==0) { result=false};
-  console.log('Result=' + result);
-  return result;
+    return (arr.length == 0) ? true : false;
 }
